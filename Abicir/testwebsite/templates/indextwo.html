@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>My Template</title>
+        </head>
+    <body>
+        <h1>Welcome you all to the Text Analyzer . Enter your name here below</h1>
+        <form action="/Analyze" method="post">{% csrf_token %}
+            <textarea name="text" styles="width: 736px; height: 110px;"></textarea><br>
+            
+            <input type="checkbox" name="removingpunc"> Remove Punctuation <br>
+            <input type="checkbox" name="fullcaps"> UPPERCASE<br>
+            
+            <input type="checkbox" name="newlineremover"> Remove New Lines <br>
+            <input type="checkbox" name="exspaceremover"> Remove extra spaces <br>
+            <button type="submit">Analyze the text</button>
+        </form>
+    </body>
+</html>
